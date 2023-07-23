@@ -1,0 +1,101 @@
+<?php include "php/script.php"?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>createalysis</title>
+    <!-- GOOGLE FONT LINK EMBED -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/page.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("vj-K6fjtlMgMN11Eh");
+       })();
+    </script>
+  </head>
+  <body>
+    <nav>
+        <div class=""></div>
+        <a href="index.html">
+           <img src="images/logo-black.png" alt="" class="logo"> 
+        </a>
+        <a href="index.html">
+            <img src="images/x.png" alt="">
+        </a>
+    </nav>
+    <div class="page-desc">
+        <h3>Lets talk!</h3>
+        <p>Just send us your questions or concerns for your project and we will give you the help you need.</p>
+    </div>
+    <div class="numbers">
+        <div class="contact">
+            <div class="social-med">
+                <h3>Email us or ping us here!</h3>
+                <ul>
+                    <li><b><p>Email</p></b></li>
+                    <li><p>hello@creatalysis.com</p></li>
+                </ul>
+                <ul>
+                    <li><b><p>Whatsapp on</p></b></li>
+                    <li><p>+91 79001 76277</p></li>
+                </ul>
+                <div class="social">
+                    <img src="images/ig.png" alt="">
+                    <img src="images/in.png" alt="">
+                    <img src="images/twt.png" alt="">
+                </div>
+            </div>
+            <form method="post" onsubmit="onFormSubmit();"> 
+                <input type="text" placeholder="First Name" name="fName" id="fName" required>
+                <input type="text" placeholder="Last Name" name="lName" id="lName" required>
+                <input type="email" placeholder="Email id" name="email" id="email" required>
+                <input type="text" placeholder="Contact Number" name="number" id="phone" required>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"  required></textarea>
+                <div class="btn-container">
+                    <button onclick="clear()" type="reset">Cancel</button>
+                    <button class="send" type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <img src="images/logo-white.png" alt="" class="logo">
+    </footer>
+
+    <script>
+    function onFormSubmit() {
+        event.preventDefault();
+        console.log("kjdahkshd")
+
+        var params = {
+            from_name : document.getElementById("fName").value+ " " +document.getElementById("lName").value ,
+            email : document.getElementById("email").value,
+            phone : document.getElementById("phone").value,
+            message : document.getElementById("message").value,
+        }
+        emailjs.send("service_jtuz0i6","template_dsuqjnn",params).then(res=>{
+            alert("Email sent successfully!!!");
+            clear()
+        });
+    
+        // your Javascript code here
+    }
+
+    function clear(){
+        document.getElementById("lName").value=""
+        document.getElementById("email").value=""
+        document.getElementById("fName").value=""
+        document.getElementById("message").value=""
+        document.getElementById("phone").value=""
+    }
+</script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+
+.wrapper {
+    max-width: 80rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 8rem);
+    gap: .9rem;
+}
+.gallery__item{
+    border-radius: 20px;
+    overflow: hidden;
+}
+.gallery__item svg{
+    float:right;
+}
+
+/* Gallery Layout */
+.gallery__item--1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    border-radius: 20px;
+    background: rgba(255, 242, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery__item--1 img{
+    width: 60%;
+    height: auto;
+}
+
+.gallery__item--2 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 2;
+    background-image: url("../images/program.png");
+    background-size: contain;
+    background-position: center;
+}
+.gallery__item--2 .gallery__link{
+    background: rgba(0, 0, 0, 0.705);
+}
+.gallery__item--2 .gallery__link h4,h3{
+    color: #fff;
+}
+
+.gallery__item--3 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
+    background: rgba(0, 0, 0, 0.1);
+}
+.gallery__item--3 h4,p{
+    color: #000;
+}
+
+.gallery__item--4 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    background-image: url("../images/learn.png");
+    background-size: contain;
+    background-position: center;
+}
+
+.gallery__item--5 {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+}
+
+.gallery__item--6 {
+    position: relative;
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 3;
+}
+.gallery__item--6 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__item--7 {
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 2;
+    background: #FF4D4D;
+}
+.gallery__item--7 h4, 
+.gallery__item--7 h3,
+.gallery__item--8 h4, 
+.gallery__item--8 h3,
+.gallery__item--5 h3{
+    color: #000;
+}
+.gallery__item--8 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 2;
+    background: 
+    rgba(58, 227, 116, 1);
+    color: #000;
+}
+.gallery__item--9 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+    background: rgba(61, 61, 61, 1);
+}
+.gallery__item--10 {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+    background: rgba(125, 95, 255, 1);
+}
+/* Gallery Link */
+.gallery__link {
+    position: relative;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.hoverr{
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.hoverr:hover{
+    box-shadow: 0px 19px 44px 10px rgba(0, 0, 0, 0.247);
+    cursor: pointer;
+}
+.gallery__link .title,
+.gallery__link .description{
+    width: 100%;
+}
+.gallery__link .title .title-text{
+    float: left;
+}
+.gallery__link .title svg{
+    float: right;
+}
+
+@media screen and (max-width: 60rem) {
+    .wrapper {
+        padding: 1rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Gallery Layout */
+    .gallery__item--1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .gallery__item--2 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .gallery__item--3 {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    .gallery__item--4 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 2;
+    }
+
+    .gallery__item--5 {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .gallery__item--6 {
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 2;
+    }
+
+
+    .gallery__item--7 {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    .gallery__item--8 {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+    }
+    .gallery__item--9 {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+    .gallery__item--10 {
+        grid-column: 2 / span 1;
+        grid-row: 6 / span 1;
+    }
+
+    .gallery__overlay {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 35rem) {
+    .gallery {
+        display: block;
+    }
+
+    .gallery__item {
+        margin: .5rem;
+    }
+
+    .gallery__link, .gallery__item--1, .gallery__item--5{
+        height: 40vh;
+    }
+
+    .gallery__overlay {
+        font-size: 1rem;
+    }
+}

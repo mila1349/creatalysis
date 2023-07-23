@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+}
+:root {
+    --primary-color: rgba(255, 242, 0, 1);
+    --secondary-color:rgba(125, 95, 253, 1);
+}
+nav{
+    width: 100%;
+    background: var(--primary-color);
+    padding: 1rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo,
+footer .logo{
+    height:40px ;
+}
+.page-desc{
+    background: #000;
+    padding: 5rem 8rem;
+    color: #fff;
+}
+.page-desc p{
+    margin-top: 1rem;
+    color: #fff;
+}
+.features{
+    width: 100%;
+    padding: 5rem 8rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #000 !important;
+}
+.feature-container{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+.feature{
+    width: 30%;
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px 14px rgba(0, 0, 0, 0.05);
+    color: #000 !important;
+}
+.feature img{
+    margin-bottom: 3rem;
+    width: 120px;
+}
+.feature-text p{
+    margin-top: 1rem;
+}
+.numbers{
+    display: flex;
+    width: 100%;
+    padding: 8rem 8rem;
+    justify-content: space-between;
+}
+.number{
+    color: #000;
+    text-align: center;
+}
+.line{
+    background: #000;
+    width: 2px;
+    height: 80px;
+}
+.contact-sec{
+    padding: 5rem 8rem;
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+footer{
+    width: 100%;
+    background: #000;
+    padding: 1rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.number-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5rem 2rem;
+    background: #fff;
+    box-shadow: 0px 0px 90px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.number-container .number{
+    text-align: left;
+    width: 25%;
+}
+.number-container .number p{
+    margin-top: 1rem;
+}
+.number-container .line{
+    height: 300px;
+    margin: auto;
+}
+
+.steps{
+    width: 100%;
+    padding: 5rem 8rem;
+    background: var(--secondary-color);
+}
+.steps-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 10rem);
+    gap:2rem;
+}
+.step{
+    display: flex;
+    max-width: 80rem;
+}
+.step-con{
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-left: 1rem;
+    width: 100%;
+}
+.step-con h3{
+    margin-bottom: 0.5rem;
+}
+.number-step{
+    width: 50px;
+}
+.step-1 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+}
+.step-2 {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+}
+.step-3 {
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 1;
+}
+.step-4 {
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 1;
+}
+.step-0 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(50px + 1rem);
+}
+.step-0 h3,
+.step-5 h3{
+    width: auto;
+}
+.step-6{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+}
+.step-7{
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 2;
+}
+.step-8{
+    grid-column: 3 / span 4;
+    grid-row: 3 / span 1;
+}
+.step-5{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(50px + 1rem);
+}
+
+.contact{
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 9px 14px rgba(0, 0, 0, 0.05);
+}
+
+.social-med{
+    width: 40%;
+    background: var(--secondary-color);
+    padding: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ul{
+    margin-bottom: 1rem;
+}
+li{
+    margin-bottom: 0.5rem;
+}
+.social-med h3{
+    margin-bottom: 2rem;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 60%;
+    padding: 2rem;
+}
+input, textarea{
+    padding: 0.5rem;
+    height: 40px;
+    border: none;
+    width: 45%;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    font-family: 'Raleway', sans-serif;
+}
+textarea{
+    width: 100%;
+    height: 150px;
+    margin-top: 2rem;
+}
+form .send{
+    background: var(--secondary-color);
+    color: #fff;
+}
+input:focus {
+    border:var(--secondary-color);
+}
+
+/* MEIDIA QUERIES */
+@media only screen and (max-width: 500px) {
+    nav {
+      padding: 1rem;
+    }
+    .features, .numbers, .steps, .page-desc, .contact-sec, .steps{
+        padding: 3rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .feature-container, .numbers{
+        flex-direction: column;
+        justify-content: center
+    }
+    .feature{
+        width: 250px;
+        margin-bottom: 1rem;
+    }
+    .line{
+        display: none;
+    }
+    .number{
+        margin-bottom: 3rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .number-container{
+        flex-direction: column;
+        justify-content: center
+    }
+    .number-container .number{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .number-container .line{ 
+        display: none;
+    }
+
+    /* STEPS RESPONSIVENSESS */
+    .step-0, .step-5{
+        grid-column: 1 / span 4;
+        grid-row: 1 / span 1;
+    }
+    .step-1, .step-6{
+        grid-column: 1 / span 4;
+        grid-row: 2 / span 1;
+    }
+    .step-2, .step-7{
+        grid-column: 1 / span 4;
+        grid-row: 3 / span 1;
+    }
+    .step-3, .step-8{
+        grid-column: 1 / span 4;
+        grid-row: 4 / span 1;
+    }
+    .step-4{
+        grid-column: 1 / span 4;
+        grid-row: 5 / span 1;
+    }
+
+    .contact{
+        flex-direction: column;
+    }
+    .social-med, form, input{
+        width: 100%;
+    }
+    .social-med, form{
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .steps{
+        padding: 2rem;
+    }
+}
