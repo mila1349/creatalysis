@@ -59,10 +59,10 @@
         transform .5s,
         filter .5s;
 }
-.hoverr:hover .img-overlay img{
+/* .hoverr:hover .img-overlay img{
     transform: scale(1);
     filter: blur(1px);
-}
+} */
 .gallery__item--2 .gallery__link{
     background: rgba(0, 0, 0, 0.705);
 }
@@ -150,11 +150,11 @@
 .hoverr{
     transition: transform 0.65s ease;
 }
-.hoverr:hover{
+/* .hoverr:hover{
     transform: scale(1.15); 
     z-index: 100;
     cursor: pointer;
-}
+} */
 .gallery__link .title,
 .gallery__link .description{
     width: 100%;
@@ -239,14 +239,26 @@
         margin: .5rem;
     }
 
-    .gallery__item--1, .gallery__item--5, .gallery__item--3, .gallery__item--8{
+    .gallery__item--1, .gallery__item--5, .gallery__item--3, .gallery__item--8, .gallery__item--7{
         height: 40vh;
     }
-    .gallery__item--2, .gallery__item--7, .gallery__item--4, .gallery__item--9, .gallery__item--10{
+    .gallery__item--2, .gallery__item--4, .gallery__item--9, .gallery__item--10{
         height: 20vh;
     } 
 
     .gallery__overlay {
         font-size: 1rem;
+    }
+}
+@media (hover: hover) {
+    .hoverr:hover{
+        transform: scale(1.08); 
+        z-index: 100;
+        cursor: pointer;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    }
+    .hoverr:hover .img-overlay img{
+        transform: scale(1);
+        filter: blur(1px);
     }
 }

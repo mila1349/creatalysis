@@ -1,5 +1,5 @@
 $(window).load(function(){
-    $(window).scrollTop(0);
+    $(window).scrollTop(0,0);
     setTimeout(function(){
         $('#preloader').velocity({
             opacity : 0.1,
@@ -18,5 +18,5 @@ $(window).load(function(){
         })  
             }
         })
-    },1000)
+    },100)
 })
