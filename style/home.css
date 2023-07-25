@@ -1,6 +1,6 @@
 
 .wrapper {
-    max-width: 85rem;
+    max-width: 80rem;
     padding: 2rem;
     margin: 0 auto;
 }
@@ -9,8 +9,8 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 0.8fr);
-    grid-template-rows: repeat(6, 7.5rem);
-    gap: 1.1rem;
+    grid-template-rows: repeat(6, 7rem);
+    gap: 1rem;
 }
 .gallery__item{
     border-radius: 20px;
