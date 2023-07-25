@@ -258,6 +258,12 @@ input:focus {
     .features, .numbers, .steps, .page-desc, .contact-sec, .steps{
         padding: 3rem;
     }
+    .step-con{
+        padding: 1rem;
+    }
+    .steps-wrapper {
+        grid-template-rows: repeat(4, 15rem);
+    }
 }
 @media only screen and (max-width: 600px) {
     .feature-container, .numbers{
@@ -291,6 +297,7 @@ input:focus {
 
     /* STEPS RESPONSIVENSESS */
     .step-0, .step-5{
+        padding: 1rem;
         grid-column: 1 / span 4;
         grid-row: 1 / span 1;
     }

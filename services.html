@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="style/page.css">
   </head>
   <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+    <script src="load.js"></script>
+    
+    <div id="hola">
+      <div id="preloader">
+      <span></span>
+      <span></span>
+      </div>
+    </div>
+
+    <div class="all">
     <nav>
         <div class=""></div>
         <a href="index.html">
@@ -22,27 +35,27 @@
         </a>
     </nav>
     <div class="page-desc">
-        <h3>Our Services</h3>
-        <p>We are passionate about helping businesses unlock their full potential through our unique blend of creativity and in-depth understanding. With our expertise, we'll propel your success to new heights.</p>
+        <h3 class="drop-in">Our Services</h3>
+        <p class="drop-in">We are passionate about helping businesses unlock their full potential through our unique blend of creativity and in-depth understanding. With our expertise, we'll propel your success to new heights.</p>
     </div>
     <div class="features">
-        <h3>Our Sevices</h3>
+        <h3 class="drop-in">Our Sevices</h3>
         <div class="feature-container">
-            <div class="feature">
+            <div class="feature drop-in">
                 <img src="images/uc.png" alt="">
                 <div class="feature-text">
                     <h4>UX Consulting</h4>
                     <p>We dive deep into understanding user behaviors, motivations, and pain points through thoughtful research and analysis.</p>
                 </div>
             </div>
-            <div class="feature">
+            <div class="feature drop-in">
                 <img src="images/pp.png" alt="">
                 <div class="feature-text">
                     <h4>Plug-and-Play IAAS</h4>
                     <p>With Plug-and-play Interview-as-a-Service, we seamlessly integrate our expert interviewers with your team or design partner to uncover valuable user insights and drive impactful UX design decisions.</p>
                 </div>
             </div>
-            <div class="feature">
+            <div class="feature drop-in">
                 <img src="images/cf.png" alt="">
                 <div class="feature-text">
                     <h4>Collaboration facilities</h4>
@@ -51,7 +64,7 @@
             </div>
         </div>
     </div>
-    <div class="numbers">
+    <div class="numbers drop-in">
         <div class="number">
             <h1>777</h1>
             <p>Hrs of interviews completed</p>
@@ -79,5 +92,6 @@
     <footer>
         <img src="images/logo-white.png" alt="" class="logo">
     </footer>
+</div>
   </body>
 </html>

@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="style/page.css">
   </head>
   <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+    <script src="load.js"></script>
+    
+    <div id="hola">
+      <div id="preloader">
+      <span></span>
+      <span></span>
+      </div>
+    </div>
+
+    <div class="all">
     <nav>
         <div class=""></div>
         <a href="index.html">
@@ -22,12 +35,12 @@
         </a>
     </nav>
     <div class="page-desc">
-        <h3>About Us</h3>
-        <p>This is Creatalysis Studio, where creative thinking meets strategic analysis. We are passionate about helping businesses unlock their full potential through our unique blend of creativity and in-depth understanding. With our expertise, we'll propel your success to new heights.</p>
+        <h3 class="drop-in">About Us</h3>
+        <p class="drop-in">This is Creatalysis Studio, where creative thinking meets strategic analysis. We are passionate about helping businesses unlock their full potential through our unique blend of creativity and in-depth understanding. With our expertise, we'll propel your success to new heights.</p>
     </div>
     <div class="features">
-        <h3>Why choose us?</h3>
-        <div class="feature-container">
+        <h3 class="drop-in">Why choose us?</h3>
+        <div class="feature-container drop-in">
             <div class="feature">
                 <img src="images/pp.png" alt="">
                 <div class="feature-text">
@@ -51,7 +64,7 @@
             </div>
         </div>
     </div>
-    <div class="numbers">
+    <div class="numbers drop-in">
         <div class="number">
             <h1>777</h1>
             <p>Hrs of interviews completed</p>
@@ -70,24 +83,24 @@
    
     <div class="steps">
         <div class="steps-wrapper">
-            <div class="step step-5">
+            <div class="step step-5 drop-in">
                 <h3 class="number-step">Our Approach</h3>
             </div>
-            <div class="step step-6">
+            <div class="step step-6 drop-in">
                 <h3 class="number-step">01</h3>
                 <div class="step-con">
                     <h3>User Insights</h3>
                     <p>We gather valuable insights through comprehensive user interviews and observations, allowing us to understand their needs, preferences, and pain points.</p>
                 </div>
             </div>
-            <div class="step step-7">
+            <div class="step step-7 drop-in">
                 <h3 class="number-step">02</h3>
                 <div class="step-con">
                     <h3>Actionable Recommend ations</h3>
                     <p>Based on our thorough analysis of user feedback and research findings, we provide actionable recommendations to enhance the user experience and drive business growth.</p>
                 </div>
             </div>
-            <div class="step step-8">
+            <div class="step step-8 drop-in">
                 <h3 class="number-step">03</h3>
                 <div class="step-con">
                     <h3>Collaboration & Iteration</h3>
@@ -99,5 +112,6 @@
     <footer>
         <img src="images/logo-white.png" alt="" class="logo">
     </footer>
+</div>
   </body>
 </html>

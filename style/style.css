@@ -10,6 +10,87 @@ a{
     color: #fff;
 }
 
+/* ====  Preloader styles ==== */
+#hola{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252328;
+    position: fixed;
+    z-index: 999;
+}
+#preloader {
+	position:relative;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    margin: 0 auto;
+}
+#preloader span {
+	position:absolute;
+	border: 8px solid #ffe066;
+	border-top: 8px solid transparent;
+	border-radius:999px;
+}
+
+#preloader span:nth-child(1){
+	width:80px;
+	height:80px;
+	animation: spin-1 2s infinite linear;
+}
+#preloader span:nth-child(2){
+	top: 20px;
+	left: 20px;
+	width:40px;
+	height:40px;
+	animation: spin-2 1s infinite linear;
+}
+@keyframes spin-1 {
+	0% {transform: rotate(360deg); opacity: 1;}
+	50% {transform: rotate(180deg); opacity: 0.5;}
+	100% {transform: rotate(0deg); opacity: 1;}
+}
+@keyframes spin-2 {
+	0% {transform: rotate(0deg); opacity: 0.5;}
+	50% {transform: rotate(180deg); opacity: 1;}
+	100% {transform: rotate(360deg); opacity: 0.5;}
+}
+
+.animate-border{
+    /* border: 40px solid #EDEBE6; */
+    transition: border .5s .2s ease;
+  }
+  .all .divide:before{
+    transition: all .6s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    width: 0;
+  }
+  .all .divide:after{
+    transition: all .6s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    width: 0;
+  }
+  .all{
+    /* height: 100vh; */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .all:before{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+  }
+  .all:after{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    right: 0;
+  }
+
 /* FONT */
 h1{
     font-family: 'League Spartan', sans-serif;
@@ -17,29 +98,23 @@ h1{
     font-weight: 300;
     font-size: calc(40px + (80 - 40) * ((100vw - 320px) / (1400 - 320)));
 }
-h2{
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    font-weight: 400;
-    line-height: 100%;
-    font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1400 - 320)));
-}
 h3{
     font-family: 'League Spartan', sans-serif;
     font-weight: bolder;
     letter-spacing: 0.05em;
-    font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (1400 - 320)));
+    font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1400 - 320)));
 }
 
 p, li{
     font-family: 'Raleway', sans-serif;
-    font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1400 - 320)));
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1400 - 320)));
+    line-height: 120%;
 }
 h4{
     font-family: 'League Spartan', sans-serif;
     font-weight: bolder;
 
-    font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1400 - 320)));
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1400 - 320)));
 }
 h5{
     font-weight: lighter;
@@ -52,13 +127,12 @@ body {
 }
 button{
     border-radius: 12px;
-    padding: 1rem;
+    padding: 1rem 3rem;
     border: none;
     font-family: 'Raleway', sans-serif;
     margin-top: 2rem;
     cursor: pointer;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-
 }
 button:hover{
     box-shadow: 0px 19px 44px 10px rgba(0, 0, 0, 0.247);
@@ -72,8 +146,40 @@ ul{
 .btn-container{
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .btn-container button{
     margin-left: 1rem;
+}
+@media only screen and (max-width: 600px) {
+    form button{
+        width: 100%;
+    }
+    button{
+        padding: 1rem;
+    }
+}
+
+.drop-in {
+    
+    animation: drop-in 1s ease 200ms backwards;
+    animation-delay: 2s;
+   }
+   
+.drop-in-2 {
+    
+    animation: drop-in 1200ms ease 500ms backwards;
+    animation-delay: 2s;
+}
+
+@keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
 }
