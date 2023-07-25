@@ -238,17 +238,14 @@
 
     .gallery__item {
         margin: .5rem;
+        height: auto;
     }
-
-    .gallery__item--1, .gallery__item--5, .gallery__item--3, .gallery__item--8{
-        height: 40vh;
+    .gallery__link .title{
+        margin-bottom: 1.5rem;
     }
-    .gallery__item--2, .gallery__item--4, .gallery__item--9, .gallery__item--10{
-        height: 20vh;
-    } 
-    .gallery__item--7, .gallery__item--8{
-        height: 25vh;
-    } 
+    .gallery__item--1, .gallery__item--5{
+        height: 30vh;
+    }
 
     .gallery__overlay {
         font-size: 1rem;
