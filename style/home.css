@@ -1,6 +1,6 @@
 
 .wrapper {
-    max-width: 80rem;
+    max-width: 85rem;
     padding: 2rem;
     margin: 0 auto;
 }
@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 8rem);
-    gap: .9rem;
+    gap: 1.2rem;
 }
 .gallery__item{
     border-radius: 20px;
@@ -148,7 +148,8 @@
     flex-direction: column;
 }
 .hoverr{
-    transition: transform 0.65s ease;
+    transition: transform 0.65s ease, box-shadow 0.65s ease;
+    /* transition: box-shadow 0.65s ease; */
 }
 /* .hoverr:hover{
     transform: scale(1.15); 
@@ -255,7 +256,7 @@
         transform: scale(1.08); 
         z-index: 100;
         cursor: pointer;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     }
     .hoverr:hover .img-overlay img{
         transform: scale(1);
